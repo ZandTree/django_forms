@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>letter from mr.X </title>
+    </head>
+    <body>
+        <h1>We accept all msg about unknown creatures</h1>
+        <h2>Just fill out the form:</h2>
+        <form class="" action="" method="post">
+            {% csrf_token %}
+            {{form1}}
+
+            <input type="submit" name="" value="Send">
+            <p>field in the form</p>
+            {% for field in form %}
+                {% if field.help_text %}
+                <p>field text is: {{field.help_text}}</p>
+                {% endif %}
+            {% endfor %}
+
+
+        </form>
+        <h3>p.s. А вот теперь вопрос: Как такую форму обрабатывать</h3>
+        <h3>Какие тут переменные впишуться в variables in request.POST? </h3>
+
+        <h1>Again a form!!!!!!!!!!</h1>
+        <!-- <form class="" action="" method="post">
+            {#{% csrf_token %}#}
+            {{form2}}
+
+            <input type="submit" name="" value="Go">
+        </form> -->
+
+    </body>
+</html>

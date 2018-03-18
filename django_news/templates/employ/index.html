@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>Welcome by index page!</h1>
+        {% if em %}
+        <h1>List of employees: </h1>
+            {% for person in em %}
+            <h3>{{person}}</h3>
+            {% endfor %}
+        {% endif %}
+
+    </body>
+</html>
